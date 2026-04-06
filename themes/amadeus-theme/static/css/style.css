@@ -1,0 +1,73 @@
+:root {
+  --amadeus-blue: #003580;
+  --amadeus-light: #0070c0;
+  --amadeus-accent: #e8491d;
+  --bg: #f8f9fa;
+  --card-bg: #fff;
+  --text: #2d3436;
+  --text-muted: #636e72;
+  --border: #dfe6e9;
+  --success: #00b894;
+  --warning: #fdcb6e;
+  --danger: #d63031;
+  --radius: 8px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--amadeus-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Nav */
+.navbar { background: var(--amadeus-blue); padding: 1rem 2rem; display: flex; align-items: center; gap: 2rem; }
+.navbar .brand { color: #fff; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
+.navbar a { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+.navbar a:hover { color: #fff; text-decoration: none; }
+
+/* Layout */
+.container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+.hero { text-align: center; padding: 3rem 1rem; }
+.hero h1 { font-size: 2.2rem; color: var(--amadeus-blue); margin-bottom: 0.5rem; }
+.hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+/* Cards */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+.card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: box-shadow 0.2s; }
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.card h3 { color: var(--amadeus-blue); margin-bottom: 0.4rem; font-size: 1.1rem; }
+.card p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Module page */
+.module-header { border-bottom: 3px solid var(--amadeus-blue); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.module-header h1 { color: var(--amadeus-blue); }
+.objectives { background: #e8f4f8; border-left: 4px solid var(--amadeus-light); padding: 1rem 1.5rem; border-radius: 0 var(--radius) var(--radius) 0; margin: 1rem 0; }
+.key-terms { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.key-terms .term { background: var(--amadeus-blue); color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; }
+.content-outline li { margin: 0.5rem 0; padding-left: 0.5rem; }
+.quiz-embed { margin: 2rem 0; padding: 1.5rem; background: var(--card-bg); border: 2px dashed var(--border); border-radius: var(--radius); text-align: center; }
+
+/* Quiz routing */
+.routing-box { padding: 1rem; border-radius: var(--radius); margin: 0.5rem 0; }
+.routing-box.pass { background: #d4edda; border-left: 4px solid var(--success); }
+.routing-box.remedial { background: #fff3cd; border-left: 4px solid var(--warning); }
+.routing-box.retry { background: #f8d7da; border-left: 4px solid var(--danger); }
+
+/* Mock interview */
+.scenario-box { background: #fff8e1; border: 1px solid #ffe082; border-radius: var(--radius); padding: 1.5rem; margin: 1rem 0; }
+.question { background: var(--card-bg); border-left: 4px solid var(--amadeus-accent); padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+.solution { background: #e8f5e9; border-left: 4px solid var(--success); padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 var(--radius) var(--radius) 0; }
+.coforge-tip { background: #e3f2fd; border: 1px solid #90caf9; border-radius: var(--radius); padding: 1rem 1.5rem; margin: 1rem 0; }
+
+/* Progress bar */
+.progress-bar { background: var(--border); border-radius: 20px; height: 8px; margin: 1rem 0; }
+.progress-bar .fill { background: var(--success); height: 100%; border-radius: 20px; transition: width 0.3s; }
+
+/* Footer */
+.footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .container { padding: 1rem; }
+  .hero h1 { font-size: 1.6rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .navbar { flex-wrap: wrap; gap: 0.5rem; padding: 0.8rem 1rem; }
+}

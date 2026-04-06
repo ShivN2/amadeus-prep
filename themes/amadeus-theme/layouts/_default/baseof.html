@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="{{ "/" | relURL }}" class="brand">✈ AMADEUS Prep</a>
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="footer">
+    <p>AMADEUS GDS Interview Prep for Coforge &copy; {{ now.Year }} | Built with Hugo</p>
+  </footer>
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

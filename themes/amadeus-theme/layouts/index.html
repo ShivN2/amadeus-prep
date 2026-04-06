@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="hero">
+  <h1>✈ AMADEUS GDS Interview Prep</h1>
+  <p>Comprehensive preparation platform for Coforge AMADEUS GDS positions. 28 modules, quizzes, and mock interview scenarios.</p>
+</div>
+
+<h2>📚 Learning Modules</h2>
+<div class="card-grid">
+  {{ range (where .Site.RegularPages "Section" "modules").ByWeight }}
+  <a href="{{ .RelPermalink }}" style="text-decoration:none;color:inherit">
+    <div class="card">
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Description }}</p>
+    </div>
+  </a>
+  {{ end }}
+</div>
+
+<h2 style="margin-top:2rem">🎯 Mock Interviews</h2>
+<div class="card-grid">
+  {{ range (where .Site.RegularPages "Section" "mock-interviews") }}
+  <a href="{{ .RelPermalink }}" style="text-decoration:none;color:inherit">
+    <div class="card">
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Description }}</p>
+    </div>
+  </a>
+  {{ end }}
+</div>
+
+<h2 style="margin-top:2rem">📝 Quizzes</h2>
+<div class="card-grid">
+  {{ range (where .Site.RegularPages "Section" "quizzes").ByWeight }}
+  <a href="{{ .RelPermalink }}" style="text-decoration:none;color:inherit">
+    <div class="card">
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Description }}</p>
+    </div>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

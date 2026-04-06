@@ -1,0 +1,35 @@
+baseURL = "https://yourusername.github.io/amadeus-prep/"
+languageCode = "en-us"
+title = "AMADEUS GDS Interview Prep — Coforge"
+theme = "amadeus-theme"
+publishDir = "docs"
+
+[params]
+  description = "Comprehensive AMADEUS GDS interview preparation platform for Coforge candidates"
+  author = "FRIP"
+  quizPassScore = 80
+  quizRemedialScore = 60
+  typeformBaseURL = "https://form.typeform.com/to/"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Modules"
+    url = "/modules/"
+    weight = 2
+  [[menu.main]]
+    name = "Quizzes"
+    url = "/quizzes/"
+    weight = 3
+  [[menu.main]]
+    name = "Mock Interviews"
+    url = "/mock-interviews/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,3 @@
+name = "amadeus-theme"
+description = "Custom theme for AMADEUS GDS Interview Prep"
+min_version = "0.80.0"

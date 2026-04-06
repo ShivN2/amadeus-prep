@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article>
+  <div class="module-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </div>
+  {{ .Content }}
+</article>
+
+{{ with .PrevInSection }}
+<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>
+{{ end }}
+{{ with .NextInSection }}
+<a href="{{ .RelPermalink }}" style="float:right">{{ .Title }} &rarr;</a>
+{{ end }}
+{{ end }}
